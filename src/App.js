@@ -54,13 +54,13 @@ const App = () => {
                         <Route path="/employees" element="Employees" />
                         <Route path="/customers" element="Customers" />
 
-                        {/* Apps */}
+                        {/* apps */}
                         <Route path="/kanban" element="Kanban" />
                         <Route path="/editor" element="Editor" />
                         <Route path="/calendar" element="Calendar" />
                         <Route path="/color-picker" element="ColorPicker" />
 
-                        {/* Charts */}
+                        {/* charts */}
                         <Route path="/line" element="Line" />
                         <Route path="/area" element="Area" />
                         <Route path="/bar" element="Bar" />
