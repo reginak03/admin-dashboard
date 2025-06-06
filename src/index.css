@@ -6,6 +6,7 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+/*styling will be applied using tailwind, which provides ready-made classes for the css styles to be achieved*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
