@@ -28,7 +28,7 @@ const App = () => {
                 </div>
                 { activeMenu ? ( //dynamic code for the sidebar
                     <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white">
-                        {/* Sidebar component*/}
+                        {/* Sidebar component, to go to .jsx file, hold command and click on the component*/}
                         <Sidebar />
                     </div>
                 ) : (

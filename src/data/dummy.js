@@ -469,7 +469,7 @@ export const employeesGrid = [
     textAlign: 'Center' },
 ];
 
-export const links = [
+export const links = [ //list of dummy objects
   {
     title: 'Dashboard',
     links: [
@@ -482,7 +482,7 @@ export const links = [
 
   {
     title: 'Pages',
-    links: [
+    links: [ //points to 3 different things
       {
         name: 'orders',
         icon: <AiOutlineShoppingCart />,
