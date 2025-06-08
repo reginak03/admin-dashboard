@@ -23,15 +23,30 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
   //a button wrapped in a tooltip component
   <TooltipComponent content={title} position="BottomCenter">
     <button type="button" onClick={customFunc} style ={{ color }} className="relative text-xl rounded-full p-3 hover:bg-light-gray">
-      <span style={{ background: dotColor }} className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2">
-        {icon}
-      </span>
+      <span style={{ background: dotColor }} className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2" />
+      {icon}
     </button>
   </TooltipComponent>
 )
 
 const Navbar = () => {
-  const { activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick } = useStateContext(); //get the activeMenu state
+  const { activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setScreenSize } = useStateContext(); //get the activeMenu state
+
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth); //handleResize is an arrow function where we set the screen size to be equal to window.innerWidth
+    window.addEventListener('resize', handleResize); //we track all the resize options, if it resizes then we recall the handleResize function (so everytime we resize it we will set the screen size to that specific size, i.e. window.innerWidth)
+    handleResize();
+  
+    return () => window.removeEventListener('resize', handleResize); //in react we have to remove the event listener
+  }, []); //useEffect accepts a callback function, and the second parameter is a dependency array (when this is going to be called)
+
+  useEffect(() => {
+    if(screenSize <= 900) {
+      setActiveMenu(false);
+    } else {
+      setActiveMenu(true);
+    }
+  }, [screenSize]); //now we keep track of the change of the screen size
 
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
