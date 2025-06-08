@@ -14,10 +14,18 @@ const initialState = {
 export const ContextProvider = ({ children }) => { //react arrow function component
     //the states/logic of the application that the context will have
     const [activeMenu, setActiveMenu] = useState(true);
+
+    //new state for the navbar
+    const [isClicked, setIsClicked] = useState(initialState); //the value of the initialState object 
     
+    //create property for handle click function
+    const handleClick = (clicked) => {
+        setIsClicked({...initialState, [clicked]: true}); //setIsClicked is an object, so we can't just override the object by only using "clicked" (a string)
+    }
+
     return (
         //1. create the provider, 2. pass the values. setActiveMenu: we need the setter function for the menu so that we can open and close it
-        <StateContext.Provider value={{ activeMenu:activeMenu, setActiveMenu, }}> {/* the most important property that the provider has is the value property, which is an object. Whatever values are passed through here, will be passed through all of the components inside the entire application. So the state (if the sidebar is currently opened or closed) is passed*/}
+        <StateContext.Provider value = {{ activeMenu:activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick}}> {/* the most important property that the provider has is the value property, which is an object. Whatever values are passed through here, will be passed through all of the components inside the entire application. So the state (if the sidebar is currently opened or closed) is passed*/}
             {/* 3. render out the children */}
             {children} {/* always return children inside of the context (whatever you wrap the context with, whatever is inside of it will be displayed. The children component returns the underlying component below that context*/}
         </StateContext.Provider>
