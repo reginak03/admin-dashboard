@@ -10,7 +10,7 @@ import { useStateContext } from '../contexts/ContextProvider';
 
 const Sidebar = () => {
   //const activeMenu = true; //state context (dummy variable until I make it dynamic)
-  const { activeMenu, setActiveMenu, screenSize } = useStateContext(); 
+  const { activeMenu, setActiveMenu, screenSize, currentColor } = useStateContext(); 
 
   const handleCloseSideBar = () => {
     if(activeMenu && screenSize <= 900) {
@@ -47,7 +47,7 @@ const Sidebar = () => {
                   {item.title} {/* render out the item title */}
                 </p>
                 {item.links.map((link) => (
-                  <NavLink to={`/${link.name}`} key={link.name} onClick={handleCloseSideBar} className={({ isActive }) => isActive ? activeLink : normalLink}> {/* className is a function that accepts the isActive state of each specific item, and based on that state we render different classNames (curly braces = destructure)*/}
+                  <NavLink to={`/${link.name}`} key={link.name} onClick={handleCloseSideBar} style={({ isActive }) => ({backgroundColor:isActive ? currentColor : ''})} className={({ isActive }) => isActive ? activeLink : normalLink}> {/* className is a function that accepts the isActive state of each specific item, and based on that state we render different classNames (curly braces = destructure). NavLink is a special component belonging to react router, which allows us to call a callback function, and if we destructure the parameters inside that callback function, we get the isActive property (same for style)*/}
                     {link.icon} {/* inside the navlink we render out the link icon */}
                     <span className="capitalize">
                       {link.name}

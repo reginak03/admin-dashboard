@@ -11,7 +11,7 @@ import { useStateContext } from './contexts/ContextProvider';
 import './App.css';
 
 const App = () => {
-  const { activeMenu } = useStateContext(); //dynamic code for: const activeMenu = true; (which is a static value)
+  const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } = useStateContext(); //dynamic code for: const activeMenu = true; (which is a static value)
 
   return (
 //to check that tailwind is working (using its classes)
@@ -19,12 +19,12 @@ const App = () => {
 //     Tailwind is working!
 //     </div>
 
-    <div>
+    <div className={currentMode === 'Dark' ? 'dark' : ''}> {/* className is used to be able to change the mode (light-dark)*/}
         <BrowserRouter>
             <div className="flex relative dark:bg-main-dark-bg"> 
                 <div className="fixed right-4 bottom-4 style={{ zIndex: '1000' }}">
                     <TooltipComponent content="Settings" position="Top">
-                        <button type="button" className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white" style={{ background: 'blue', borderRadius: '50%' }}>
+                        <button type="button" onClick={() => setThemeSettings(true)} className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white" style={{ background: currentColor, borderRadius: '50%' }}>
                             <FiSettings />
                         </button>
                     </TooltipComponent>
@@ -40,16 +40,15 @@ const App = () => {
                     </div>
                 )}
                 <div className={
-                    `dark:bg-main-bg bg-main-bg min-h-screen w-full 
-                    ${activeMenu? 'md:ml-72' 
-                    : 'flex-2'}` //template string for repetitive code (shared classes)
+                    `dark:bg-main-dark-bg bg-main-bg min-h-screen w-full 
+                    ${activeMenu? 'md:ml-72' : 'flex-2'}` //template string for repetitive code (shared classes)
                 }>
                     <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
                         <Navbar />
                     </div>
 
                     <div>
-                        <ThemeSettings /> {/* this is where users have the possibility to choose between all the different theme options */}
+                        {themeSettings && <ThemeSettings />} {/* this is where users have the possibility to choose between all the different theme options. We only show theme settings if it si currently true*/}
 
                         <Routes>
                             {/* dashboard */}

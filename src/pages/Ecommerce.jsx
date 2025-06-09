@@ -8,6 +8,7 @@ import { earningData, SparklineAreaData, ecomPieChartDat } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 
 const Ecommerce = () => {
+  const { currentColor } = useStateContext(); //to dynamically change the page color to the color chosen by the user in the theme settings
   return (
     <div className="mt-12">
       {/* homepage: */}
@@ -21,7 +22,7 @@ const Ecommerce = () => {
           </div>
 
           <div className="mt-6">
-            <Button color="white" bgColor="blue" text="Download" borderRadius="10px" size="md" />
+            <Button color="white" bgColor={currentColor} text="Download" borderRadius="10px" size="md" />
           </div>
         </div>
 
@@ -75,10 +76,10 @@ const Ecommerce = () => {
                 </div>
 
                 <div className="mt-5"> {/* Sparkline chart */}
-                  <SparkLine currentColor="blue" id="line-sparkline" type="Line" height="80px" width="250px" data={SparklineAreaData} color="blue" />
+                  <SparkLine currentColor={currentColor} id="line-sparkline" type="Line" height="80px" width="250px" data={SparklineAreaData} color={currentColor} />
                 </div>
                 <div className="mt-10">
-                  <Button color="white" bgColor="blue" text="Download Report" borderRadius="10px" />
+                  <Button color="white" bgColor={currentColor} text="Download Report" borderRadius="10px" />
                 </div>
               </div>
 
