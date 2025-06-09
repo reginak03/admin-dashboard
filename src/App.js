@@ -49,6 +49,8 @@ const App = () => {
                     </div>
 
                     <div>
+                        <ThemeSettings /> {/* this is where users have the possibility to choose between all the different theme options */}
+
                         <Routes>
                             {/* dashboard */}
                             <Route path="/" element="Ecommerce" />
