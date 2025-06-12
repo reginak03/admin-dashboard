@@ -19,8 +19,8 @@ const Sidebar = () => {
   }
 
   //define className for different link states
-  const activeLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2';
-  const normalLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2';
+  const activeLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2 hover:opacity-90';
+  const normalLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-400 dark:hover:text-black dark:hover:bg-secondary-dark-bg hover:bg-light-gray m-2';
 
   return (
     <div>
@@ -63,4 +63,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default Sidebar;

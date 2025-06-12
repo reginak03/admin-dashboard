@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, StackingColumnSeries, Tooltip } from '@syncfusion/ej2-react-charts';
 import { stackedCustomSeries, stackedPrimaryXAxis, stackedPrimaryYAxis } from '../../data/dummy';
 
 //this chart shows the total expense and budget by month
-const Stacked = ( {width, height} ) => {
+const Stacked = ( {width, height, currentMode} ) => {
+  const backgroundColor = currentMode === 'Dark' ? '#33373E' : '#fff';
+
   return (
     <ChartComponent width={width}
                     height={height}
@@ -11,8 +13,15 @@ const Stacked = ( {width, height} ) => {
                     primaryXAxis={stackedPrimaryXAxis}
                     primaryYAxis={stackedPrimaryYAxis}
                     chartArea={{ border:{width:0} }}
-                    tooltip={{ enable:true }}
-                    legendSettings={{ background:'white' }} >
+                    tooltip={{ enable:true, 
+                               fill: currentMode === 'Dark' ? '#2d2d2d' : '#fff', 
+                               textStyle: {color: currentMode === 'Dark' ? '#F3F4F6' : '#111',}, 
+                              }}
+                    legendSettings={{
+                      background: backgroundColor,
+                      textStyle: { color: currentMode === 'Dark' ? '#F3F4F6' : '#111', },
+                    }}
+                    background={backgroundColor} >
       <Inject services={ [Legend, Category, StackingColumnSeries, Tooltip] } />
       <SeriesCollectionDirective>
         {stackedCustomSeries.map((item,index) => <SeriesDirective key={index} {...item} />)} {/* spread all the properties of the item (actual data points */}
@@ -21,4 +30,4 @@ const Stacked = ( {width, height} ) => {
   )
 }
 
-export default Stacked
+export default Stacked;

@@ -3,7 +3,7 @@ import { SparklineComponent, Inject, SparklineTooltip } from '@syncfusion/ej2-re
 
 class SparkLine extends React.PureComponent {
   render() {
-    const { id, height, width, color, data, type, currentColor } = this.props;
+    const { id, height, width, color, data, type, currentColor, currentMode } = this.props;
 
     return (
       <SparklineComponent
@@ -16,7 +16,6 @@ class SparkLine extends React.PureComponent {
         border={{ color: currentColor, width: 2 }}
         tooltipSettings={{
           visible: true,
-          // eslint-disable-next-line no-template-curly-in-string
           format: '${x} : data ${yval}',
           trackLineSettings: {
             visible: true,
@@ -27,6 +26,9 @@ class SparkLine extends React.PureComponent {
         xName="x"
         yName="yval"
         type={type}
+        legendSettings={{ background: 'transparent' }}
+        background={currentMode === 'Dark' ? '#33373E' : '#fff'}
+        theme={currentMode === 'Dark' ? 'MaterialDark' : 'Material'}
       >
         <Inject services={[SparklineTooltip]} />
       </SparklineComponent>

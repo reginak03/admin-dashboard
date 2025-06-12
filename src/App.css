@@ -45,3 +45,327 @@
 .e-input-group:not(.e-float-icon-left), .e-input-group.e-success:not(.e-float-icon-left), .e-input-group.e-warning:not(.e-float-icon-left), .e-input-group.e-error:not(.e-float-icon-left), .e-input-group.e-control-wrapper:not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-success:not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-warning:not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-error:not(.e-float-icon-left){
   border: none;
 }
+
+/*dark mode grid*/
+.dark-grid .e-grid {
+  background-color: #33373E !important;
+  color: #F3F4F6 !important;
+}
+
+.dark-grid .e-headercell {
+  background-color: #3f434c !important;
+  color: #F3F4F6 !important;
+}
+
+.dark-grid .e-rowcell {
+  background-color: #33373E !important;
+  color: #F3F4F6 !important;
+}
+
+/*dark mode toolbar background*/
+.dark-grid .e-toolbar {
+  background-color: #21252b !important; /* Dark gray */
+  border-color: #374151 !important;
+}
+
+/*toolbar container (left & right alignment wrappers)*/
+.dark-grid .e-toolbar .e-toolbar-left,
+.dark-grid .e-toolbar .e-toolbar-right {
+  background-color: #21252b !important;
+}
+
+/*buttons inside toolbar*/
+.dark-grid .e-toolbar .e-btn,
+.dark-grid .e-toolbar .e-tbar-btn {
+  background-color: transparent !important;
+  color: #f3f4f6 !important;
+  border: none !important;
+}
+
+/*hover & focus states*/
+.dark-grid .e-toolbar .e-btn:hover,
+.dark-grid .e-toolbar .e-tbar-btn:hover,
+.dark-grid .e-toolbar .e-btn:focus,
+.dark-grid .e-toolbar .e-tbar-btn:focus {
+  background-color: #21252b !important;
+  color: #ffffff !important;
+  border-radius: 6px;
+}
+
+/*toolbar search box group*/
+.dark-grid .e-toolbar .e-input-group,
+.dark-grid .e-toolbar input.e-input {
+  background-color: #21252b !important;
+  border-color: #4b5563 !important;
+  color: #f3f4f6 !important;
+}
+
+/* icon colors */
+.dark-grid .e-toolbar .e-btn .e-icons,
+.dark-grid .e-toolbar .e-toolbar-items .e-toolbar-item .e-icons {
+  color: #f3f4f6 !important;
+}
+
+/* fix white space between toolbar buttons and search bar in dark mode */
+.dark-grid .e-toolbar .e-toolbar-items {
+  background-color: #21252b !important;
+}
+
+/*dark mode toolbar button text color*/
+.dark-grid .e-toolbar .e-btn .e-tbar-btn-text {
+  color: #f3f4f6 !important;
+}
+
+/*placeholder color for dark mode search input*/
+.dark-grid .e-input-group input::placeholder {
+  color: #f3f4f6 !important; /*light color for visibility*/
+  opacity: 1; /*ensure it's fully visible*/
+}
+
+.dark-grid .e-gridheader,
+.dark-grid .e-gridcontent {
+  background-color: #33373E !important;
+}
+
+.dark-grid .e-gridpager {
+  background-color: #21252b !important;
+  color: #f3f4f6 !important; 
+  border-top: 1px solid #374151 !important;
+}
+
+/*page number buttons and nav arrows*/
+.dark-grid .e-gridpager .e-pagercontainer,
+.dark-grid .e-gridpager .e-pagercontainer {
+  background-color: transparent !important;
+  color: #f3f4f6 !important;
+}
+
+/*highlight active page number*/
+.dark-grid .e-gridpager .e-numericitem.e-active {
+  background-color: #3f434c !important;
+  color: #ffffff !important;
+  border-radius: 6px;
+}
+
+/*arrows and other controls*/
+.dark-grid .e-gridpager .e-prev,
+.dark-grid .e-gridpager .e-next,
+.dark-grid .e-gridpager .e-first,
+.dark-grid .e-gridpager .e-last,
+.dark-grid .e-gridpager .e-pager-default {
+  background-color: transparent !important;
+  color: #f3f4f6 !important;
+}
+
+/*remove white border around the buttons*/
+.dark-grid .e-gridpager .e-numericitem,
+.dark-grid .e-gridpager .e-prev,
+.dark-grid .e-gridpager .e-next,
+.dark-grid .e-gridpager .e-first,
+.dark-grid .e-gridpager .e-last {
+  border: none !important;
+}
+
+.dark-grid .status-text {
+  color: white !important;
+}
+
+/*light mode grid*/
+.normal-grid .e-grid {
+  background-color: #F3F4F6 !important;
+  color: #3f434c !important;
+}
+
+.normal-grid .e-headercell {
+  background-color: #F3F4F6 !important;
+  color: #3f434c !important;
+}
+
+.normal-grid .e-rowcell {
+  background-color: #F3F4F6 !important;
+  color: #3f434c !important;
+}
+
+.normal-grid .e-toolbar {
+  background-color: #F3F4F6 !important;
+  color: #3f434c !important;
+}
+
+.normal-grid .e-gridheader,
+.normal-grid .e-gridcontent {
+  background-color: #F3F4F6 !important;
+}
+
+/*calendar in dark mode??*/
+
+
+/*kanban in dark mode*/
+.dark #kanban .e-kanban-table {
+  background-color: #33373e !important;
+}
+
+/* individual cards */
+.dark #kanban .e-card {
+  background-color: #33373e !important;
+  color: #f9fafb !important;
+  border: none !important;
+}
+
+.dark #kanban .e-card:hover {
+  box-shadow: 0 0 0 2px #4b5563 !important;
+}
+
+.dark #kanban .e-card {
+  border-radius: 0.75rem !important;
+  border: 1px solid #4b5563 !important; 
+}
+
+.dark #kanban .e-kanban-header .e-header-cells,
+.dark #kanban .e-kanban-header .e-header-wrap {
+  background-color: #21252b !important;
+  color: #f9fafb !important;
+}
+
+.dark #kanban .e-kanban-content {
+  background-color: #33373e;
+}
+
+/*background of the container with all the tasks*/
+.dark #kanban .e-kanban-content .e-content-row,
+.dark #kanban .e-kanban-content .e-content-cells,
+.dark #kanban .e-kanban-card {
+  background-color: #21252b !important;
+  color: #f9fafb !important;
+}
+
+/*make text light so it's readable*/
+.dark #kanban .e-kanban-card *,
+.dark #kanban .e-card-header,
+.dark #kanban .e-card-content,
+.dark #kanban .e-header-text {
+  color: #f9fafb !important;
+}
+
+/*arrows*/
+.dark #kanban .e-column-expand,
+.dark #kanban .e-column-collapse {
+  color: #f9fafb !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.dark #kanban .e-column-expand:hover,
+.dark #kanban .e-column-collapse:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/*number of items in each section*/
+.dark #kanban .e-item-count {
+  color: #f9fafb !important;
+}
+
+/*task number*/
+.dark #kanban .e-card-header-caption .e-card-header-title {
+  color: gray !important;
+}
+
+/*title of collapsed section*/
+.e-collapse-header-text {
+  color: #f9fafb !important;
+}
+/****************************************************************/
+/*add/edit task (dropdown menu is not working)*/
+/*header*/
+/* #kanban_dialog_wrapper #kanban_dialog_wrapper_dialog-header {
+  background-color:#1f2937;
+}
+.e-kanban-dialog .e-dlg-header {
+  color: #f9fafb !important;
+}
+#kanban_dialog_wrapper #kanban_dialog_wrapper_dialog-header .e-dlg-closeicon-btn .e-icons{
+  color:white;
+}
+#kanban_dialog_wrapper #kanban_dialog_wrapper_dialog-header .e-dlg-closeicon-btn:hover {
+  background-color: #4b5563 !important;
+}
+
+.e-kanban-dialog .e-dlg-content {
+  background-color: #1f2937 !important;
+  color: #f9fafb !important;
+} */
+
+/*input and textarea fields*/
+/* .e-kanban-dialog input,
+.e-kanban-dialog textarea {
+  color: #f9fafb !important;
+} */
+
+/*dropdown icon*/
+/* .e-input-group-icon.e-ddl-icon.e-search-icon {
+  color: #cbd5e1;
+} */
+
+/*labels*/
+/* .e-kanban-dialog .e-label {
+  color: #d1d5db !important;
+} */
+
+/*footer*/
+/* .e-kanban-dialog .e-footer-content {
+  background-color:#1f2937;
+}
+.e-kanban-dialog .e-footer-content .e-btn {
+  background-color: #1f2937 !important;
+  color: #f9fafb !important;
+}
+.e-kanban-dialog .e-footer-content .e-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+.e-kanban-dialog .e-footer-content .e-btn.e-primary {
+  background-color: #2563eb !important;
+  color: #f9fafb !important;
+}
+.e-kanban-dialog .e-footer-content .e-btn.e-primary:hover {
+  background-color: #1956db !important;
+} */
+/****************************************************************/
+
+/*editor in dark mode*/
+.dark .e-richtexteditor .e-content {
+  background-color: #21252b;
+  color: #f9fafb;
+}
+
+/*outer toolbar container*/
+.dark .e-richtexteditor .e-toolbar {
+  background-color: #21252b !important;
+  color: #f9fafb !important;
+}
+
+/*the actual buttons row*/
+.dark .e-richtexteditor .e-toolbar-items {
+  background-color: #21252b !important;
+  color: #f9fafb !important;
+}
+
+/*individual buttons*/
+.dark .e-richtexteditor .e-toolbar-item .e-tbar-btn {
+  background-color: #21252b !important;
+  color: #f9fafb !important;
+}
+
+/*make toolbar icons white*/
+.dark .e-richtexteditor .e-toolbar-item .e-icons,
+.dark .e-richtexteditor .e-toolbar-item .e-btn-icon,
+.dark .e-richtexteditor .e-toolbar-item .e-rte-icon {
+  color: #f9fafb !important;
+  fill: #f9fafb !important;
+}
+
+/*target both Undo and Redo button containers*/
+.dark .e-richtexteditor .e-toolbar .e-toolbar-items > div:nth-last-child(1),
+.dark .e-richtexteditor .e-toolbar .e-toolbar-items > div:nth-last-child(2) {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}

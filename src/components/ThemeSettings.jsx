@@ -6,17 +6,16 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { themeColors } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider'; //because we want to change the global state of the application when theme is chosen 
 
-
 const ThemeSettings = () => {
   const { setColor, setMode, currentMode, currentColor, setThemeSettings } = useStateContext(); // to make the settings functionality work and change the color of the application
 
   return (
-    <div className="bg-half-transparent w-screen fixed nav-item top0 right-0">
-      <div className="float-right h-screen dark:text-gray-200 bg-white dark:[#484B52] w-400">
+    <div className="bg-half-transparent w-screen fixed nav-item top-0 right-0">
+      <div className="float-right h-screen dark:text-gray-300 bg-white dark:bg-secondary-dark-bg w-400">
         <div className="flex justify-between items-center p-4 ml-4">
           <p className="font-semibold text-xl">Settings</p>
-          <button type="button" onClick={() => setThemeSettings(false)} style={{ color:"rgb(153,171,180)", borderRadius:"50%" }} className="text-2xl p-3 hover:drop-shadow-xl hover:bg-light-gray"> {/* onClick={() => setThemeSettings(false)} allows us to close the sidebar, with setThemeSettings created in ContextProvider.js, reflected inside App.js */}
-            <MdOutlineCancel />
+          <button type="button" onClick={() => setThemeSettings(false)} style={{ color:"rgb(153,171,180)", borderRadius:"50%" }} className="text-2xl p-3 hover:drop-shadow-xl hover:bg-light-gray dark:hover:bg-secondary-dark-bg"> {/* onClick={() => setThemeSettings(false)} allows us to close the sidebar, with setThemeSettings created in ContextProvider.js, reflected inside App.js */}
+            <MdOutlineCancel className="dark:hover:text-black" />
           </button>
         </div>
 
@@ -52,4 +51,4 @@ const ThemeSettings = () => {
   )
 }
 
-export default ThemeSettings
+export default ThemeSettings;
