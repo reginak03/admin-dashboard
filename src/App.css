@@ -369,3 +369,57 @@
   box-shadow: none !important;
   border: none !important;
 }
+/*******************************************************/
+/*calendarin dark mode*/
+/*toolbar*/
+.dark .e-toolbar-items {
+  background-color: #21252b !important;
+}
+
+/*header buttons*/
+.dark .e-toolbar-item .e-tbar-btn,
+.dark #e-tbr-btn_0 .e-btn-icon,
+.dark #e-tbr-btn_1 .e-btn-icon,
+.dark #e-tbr-btn_2 .e-btn-icon,
+.dark #e-tbr-btn_3 .e-btn-icon,
+.dark #e-tbr-btn_4 .e-btn-icon { /*.dark #_nav*/
+  background-color: #21252b;
+  color:white;
+}
+
+.dark #e-tbr-btn_708 .e-btn-icon,
+.dark #e-tbr-btn_709 .e-btn-icon,
+.dark #e-tbr-btn_710 .e-btn-icon,
+.dark #e-tbr-btn_711 .e-tbar-btn-text,
+.dark #e-tbr-btn_712 .e-tbar-btn-text,
+.dark #e-tbr-btn_713 .e-tbar-btn-text,
+.dark #e-tbr-btn_714 .e-tbar-btn-text,
+.dark #e-tbr-btn_715 .e-tbar-btn-text,
+.dark #e-tbr-btn_716 .e-tbar-btn-text {
+  color:white;
+}
+
+.dark #e-tbr-btn_710 .e-tbar-btn-text {
+  color:gray;
+}
+
+/*table*/
+.dark .e-left-indent-wrap .e-schedule-table .e-header-cells {
+  background-color: #21252b;
+}
+
+.dark .e-date-header-wrap .e-schedule-table .e-header-row .e-header-cells,
+.dark .e-scroll-container .e-time-cells-wrap .e-schedule-table .e-time-slots,
+.dark .e-scroll-container .e-schedule-table .e-work-cells {
+  background-color: #21252b;
+  color: white;
+}
+
+/* lighter borders for schedule table lines in dark mode */
+.dark .e-schedule-table td,
+.dark .e-schedule-table th,
+.dark .e-schedule-table .e-work-cells,
+.dark .e-schedule-table .e-header-cells,
+.dark .e-schedule-table .e-time-cells {
+  border-color: rgb(210, 203, 203) !important; /* Light gray */
+}
