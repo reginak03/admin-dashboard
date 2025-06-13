@@ -20,7 +20,7 @@ export const ContextProvider = ({ children }) => { //react arrow function compon
     const [screenSize, setScreenSize] = useState(undefined); 
 
     //for the application settings:
-    const [currentColor, setCurrentColor] = useState('#03C9D7');
+    const [currentColor, setCurrentColor] = useState('#142278');
     const [currentMode, setCurrentMode] = useState('Light');
     const [themeSettings, setThemeSettings] = useState(false); //is the sidebar currently opened or closed
 

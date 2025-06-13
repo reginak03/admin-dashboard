@@ -29,7 +29,7 @@ const Sidebar = () => {
           <div className="flex justify-between items-center">
             <Link to="/" onClick={handleCloseSideBar} 
             className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900"> {/* flex class to make the items appear in a row */}
-              <SiShopware /> <span>Shoppy</span> {/* imaginary name of component */}
+              <SiShopware /> <span>Nexora Solutions</span> {/* imaginary name of component */}
             </Link>
             
             <TooltipComponent content="Menu" position="BottomCenter">
